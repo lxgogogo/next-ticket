@@ -61,18 +61,20 @@ function TicketTopic(props: Props) {
     <>
       <div className="w-10/12">
         <Card>
-          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+          <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
             <Avatar src={props.avatar} />
-            <h4 className="font-bold text-large">{props.userId}</h4>
-            <p className="text-tiny font-semibold">{props.content}</p>
+            <h4 className=" text-lg font-bold">
+              {props.userId?.substring(0, 8)}
+            </h4>
+            <p className="text-lg font-semibold">{props.content}</p>
           </CardHeader>
-          <CardBody className="overflow-visible py-2">
+          <CardBody className="overflow-visible py-2 px-4 flex flex-row justify-center">
             {props.images &&
               props.images.map((image, index) => (
                 <Image
                   key={index}
                   alt="Card iamge"
-                  className="object-cover rounded-xl my-1"
+                  className="object-cover rounded-xl my-1 mx-1"
                   src={image}
                   width={270}
                 />
