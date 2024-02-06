@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    API_ADDRESS: "http://next-ticket-bay.vercel.app/api",
+    API_ADDRESS: "https://next-ticket-bay.vercel.app/api",
   },
 };
 
